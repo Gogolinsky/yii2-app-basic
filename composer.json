@@ -1,27 +1,34 @@
 {
-    "name": "yiisoft/yii2-app-basic",
-    "description": "Yii 2 Basic Project Template",
-    "keywords": ["yii2", "framework", "basic", "project template"],
-    "homepage": "http://www.yiiframework.com/",
     "type": "project",
-    "license": "BSD-3-Clause",
-    "support": {
-        "issues": "https://github.com/yiisoft/yii2/issues?state=open",
-        "forum": "http://www.yiiframework.com/forum/",
-        "wiki": "http://www.yiiframework.com/wiki/",
-        "irc": "irc://irc.freenode.net/yii",
-        "source": "https://github.com/yiisoft/yii2"
-    },
-    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Gogolinsky/yii2-ckeditor.git"
+        }
+    ],
+    "minimum-stability": "stable",
     "require": {
-        "php": ">=5.4.0",
-        "yiisoft/yii2": ">=2.0.5",
-        "yiisoft/yii2-bootstrap": "*",
-        "yiisoft/yii2-swiftmailer": "*"
+        "php": ">=5.5.0",
+        "yiisoft/yii2": "^2.0",
+        "yiisoft/yii2-bootstrap": "^2.0",
+        "yiisoft/yii2-swiftmailer": "^2.0",
+        "yiisoft/yii2-authclient": "^2.0",
+        "kartik-v/yii2-grid": "^3.0",
+        "kartik-v/yii2-krajee-base": "^1.7",
+        "kartik-v/yii2-icons": "^1.4",
+        "mihaildev/yii2-ckeditor": "dev-master",
+        "mihaildev/yii2-elfinder": "^1.1",
+        "creocoder/yii2-nested-sets": "^0.9",
+        "yurkinx/yii2-image": "^1.1",
+        "kartik-v/yii2-editable": "^1.7",
+        "2amigos/yii2-file-upload-widget": "^0.1",
+        "bower-asset/colorbox": "^1.6",
+        "bower-asset/slick.js": "^1.6"
     },
     "require-dev": {
         "codeception/base": "^2.2.3",
         "codeception/verify": "~0.3.1",
+        "yiisoft/yii2-codeception": "^2.0",
         "yiisoft/yii2-debug": "*",
         "yiisoft/yii2-gii": "*",
         "yiisoft/yii2-faker": "*",

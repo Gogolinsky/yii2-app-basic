@@ -1,0 +1,57 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    width: 90% !important;
+}
+
+.page-wrap {
+    min-height: 100%;
+    width: 100%;
+    margin-bottom: -35px;
+}
+
+.page-wrap:after {
+    content: "";
+    display: block;
+}
+
+.footer, .page-wrap:after {
+    height: 35px;
+}
+
+.nav.nav-tabs {
+    margin-bottom: 15px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.select2-container .select2-choice {
+    height: 40px !important;
+}
+
+.close {
+    color: #333;
+}
+
+.close:hover {
+    color: #000;
+}
+
+.modal-backdrop {
+    z-index: 1000;
+}
+
+#map {
+    width: 690px;
+    height: 400px;
+    margin-bottom: 15px;
+}
+
+.checkbox-order {
+    margin-top: 35px;
+}

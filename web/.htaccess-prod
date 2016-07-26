@@ -1,0 +1,24 @@
+php_value error_reporting 1
+RewriteEngine on
+
+# If a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# Otherwise forward it to index.php
+RewriteRule . index.php
+
+#Compressing
+SetOutputFilter DEFLATE
+SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip
+
+#Cache
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 30 days"
+  ExpiresByType text/javascript "access plus 7 days"
+  ExpiresByType text/js "access plus 7 days"
+  ExpiresByType text/css "access plus 8 days"
+  ExpiresByType image/gif "access plus 12 days"
+  ExpiresByType image/jpeg "access plus 12 days"
+  ExpiresByType image/png "access plus 12 days"
+</IfModule>

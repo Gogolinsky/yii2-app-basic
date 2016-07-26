@@ -18,12 +18,18 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/site.css',
+        'css/style.css',
     ];
     public $js = [
+        'js/script.js',
     ];
     public $depends = [
+        'app\assets\SlickAsset',
+        'app\assets\ColorboxAsset',
         'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
+        //'yii\bootstrap\BootstrapAsset',
+    ];
+    public $publishOptions = [
+        'forceCopy' => YII_DEBUG,
     ];
 }

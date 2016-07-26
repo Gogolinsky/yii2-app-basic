@@ -1,0 +1,21 @@
+Options -Indexes
+
+<IfModule mod_rewrite.c> 
+  RewriteEngine on
+  
+  Options +FollowSymLinks
+  RewriteCond %{HTTP_HOST}	^www\.(.*)	[NC]
+  RewriteRule ^(.*)$ http://%1/$1	[R=301,L]
+
+  RewriteCond %{REQUEST_URI} !^public
+  RewriteRule ^(.*)$ web/$1 [L] 
+</IfModule>
+
+# Deny accessing below extensions
+<Files ~ "(.json|.lock|.git)">
+Order allow,deny
+Deny from all
+</Files>
+
+# Deny accessing dot files
+RewriteRule (^\.|/\.) - [F]
